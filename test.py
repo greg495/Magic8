@@ -5,19 +5,19 @@ app = Flask(__name__)
 # Defining the home page of our site
 @app.route("/")  # this sets the route to this page
 def home():
-    return render_template("magic8.html")
+    return render_template("magic8.html", answer=answer("regular_answers"))
 
 @app.route("/swanson.html")
 def swanson():
-    return render_template("swanson.html")
+    return render_template("swanson.html", answer=swanson_answer())
 
 @app.route("/yesno.html")
 def yesno():
-    return render_template("yesno.html")
+    return render_template("yesno.html", answer=yes_no_answer())
 
 @app.route("/shakespeare.html")
 def shakespeare():
-    return render_template("shakespeare.html")
+    return render_template("shakespeare.html", answer=answer("shakespeare_answers"))
 
 def answer(filename):
     f = open(filename, "r")

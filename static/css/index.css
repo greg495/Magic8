@@ -5,3 +5,11 @@ img {
 .eight_ball {
     text-align: center;
 }
+
+.answer {
+    position: absolute;
+    top: 60%;
+    left: 48%;
+    max-width: 5em;
+    color: white;
+}
